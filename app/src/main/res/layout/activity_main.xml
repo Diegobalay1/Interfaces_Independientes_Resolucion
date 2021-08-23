@@ -119,7 +119,7 @@
 
     <Button
         android:id="@+id/btnImdb"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Ver en IMDB"
         android:layout_marginTop="10dp"
