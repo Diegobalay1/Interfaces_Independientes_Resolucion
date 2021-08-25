@@ -45,7 +45,7 @@
         android:id="@+id/ivPoster"
         android:layout_width="110dp"
         android:layout_height="160dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/regreso_al_futuro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline3"/>
