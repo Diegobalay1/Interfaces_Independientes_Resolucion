@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_film_data"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,9 +20,8 @@
         android:text="Regreso al futuro"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/btnDataEditar"
-        app:layout_constraintLeft_toRightOf="@+id/ivPoster"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -65,12 +64,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="Director:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/btnDataEditar"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/txtDataTitle" />
 
     <TextView
@@ -78,11 +76,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="Robert Zemeckis"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintEnd_toEndOf="@+id/btnDataEditar"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitleDirector" />
 
     <TextView
@@ -90,12 +87,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="Año:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/btnDataEditar"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/txtDataDirector" />
 
     <TextView
@@ -103,11 +99,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="1985"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintEnd_toEndOf="@+id/btnDataEditar"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitleYear" />
 
     <TextView
@@ -118,8 +113,8 @@
         android:text="Versión extendida"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintBottom_toTopOf="@+id/btnDataVolver"
-        app:layout_constraintEnd_toEndOf="@+id/txtDataFormatGenre"
-        app:layout_constraintStart_toStartOf="@+id/txtDataFormatGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/txtDataFormatGenre" />
 
     <TextView
@@ -127,22 +122,28 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="Bluray, Sci-Fi"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintEnd_toEndOf="@+id/btnDataEditar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/ivPoster"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/txtDataYear" />
 
     <Button
         android:id="@+id/btnImdb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver en IMDB"
         android:layout_marginEnd="5dp"
+        android:text="Ver en IMDB"
         app:layout_constraintEnd_toStartOf="@+id/txtDataComments"
         app:layout_constraintStart_toStartOf="@+id/ivPoster"
         app:layout_constraintTop_toBottomOf="@id/ivPoster" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
